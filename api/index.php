@@ -1,11 +1,11 @@
 <?php
 
-require_once(__DIR__ . '/api/db_connect.php');
-require_once(__DIR__ . '/api/event_functions.php');
-require_once(__DIR__ . '/api/auth_functions.php'); // Pour isUserLoggedIn() et isUserAdmin()
+require_once(__DIR__ . '/db_connect.php');
+require_once(__DIR__ . '/event_functions.php');
+require_once(__DIR__ . '/auth_functions.php'); // Pour isUserLoggedIn() et isUserAdmin()
 
 $pageTitle = "eventribe - Événements à venir";
-include(__DIR__ . '/api/header.php');
+include(__DIR__ . '/header.php');
 
 $searchTerm = $_GET['search'] ?? '';
 
@@ -61,4 +61,4 @@ if (!empty($searchTerm)) {
     </div>
 <?php endif; ?>
 
-<?php include(__DIR__ . '/api/footer.php'); ?>
+<?php include(__DIR__ . '/footer.php'); ?>

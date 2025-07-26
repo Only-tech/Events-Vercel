@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/api/db_connect.php');
-require_once(__DIR__ . '/api/auth_functions.php');
-require_once(__DIR__ . '/api/event_functions.php');
+require_once(__DIR__ . '/db_connect.php');
+require_once(__DIR__ . '/auth_functions.php');
+require_once(__DIR__ . '/event_functions.php');
 
 // Vérifie si l'utilisateur est connecté
 if (!isUserLoggedIn()) {

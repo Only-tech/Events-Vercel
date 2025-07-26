@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/api/db_connect.php';
-require_once(__DIR__ . '/api/auth_functions.php');
+require_once __DIR__ . '/db_connect.php';
+require_once(__DIR__ . '/auth_functions.php');
 
 
 if (isUserLoggedIn()) {
@@ -22,12 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         // Le message d'erreur est déjà défini dans loginUser()
     }
-    header('Location: login.php'); // Redirige pour afficher le message
+    header('Location: /login.php'); // Redirige pour afficher le message
     exit();
 }
 
 $pageTitle = "Connexion";
-include(__DIR__ . '/api/header.php');
+include(__DIR__ . '/header.php');
 ?>
 
 <div class="max-w-md mx-auto bg-[rgb(248,248,236)] p-8 rounded-lg shadow-lg">
@@ -48,4 +48,4 @@ include(__DIR__ . '/api/header.php');
     </p>
 </div>
 
-<?php include(__DIR__ . '/api/footer.php'); ?>
+<?php include(__DIR__ . '/footer.php'); ?>
