@@ -11,20 +11,20 @@ if (session_status() == PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle ?? 'Gestion d\'Événements'; ?></title>
-    <link href="/styles/styles.css" rel="stylesheet">
-    <link href="/styles/output.css" rel="stylesheet">
+    <link href="../public/styles/styles.css" rel="stylesheet">
+    <!-- <link href="../public/styles/output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/images/SplashPaintYellow.svg">
+    <link rel="icon" type="image/svg+xml" href="../public/images/SplashPaintYellow.svg">
 </head>
 
 <body class="min-h-screen w-full flex flex-col text-[#333] bg-[#f5f5dc] font-['Inter', sans-serif]"
-    style="background-image: url('/images/SplashPaintOrange.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+    style="background-image: url('../public/images/SplashPaintOrange.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
     <header class="fixed top-0 z-10000 bg-[#f5f5dc] text-gray-900 shadow-lg transition-opacity duration-500 px-[5%] py-2 w-full">
         <nav class="flex sm:flex-row justify-between items-center bg-inherit [@media(max-width:730px)]:flex-wrap gap-2">
             <a href="/" class="[@media(max-width:730px)]:order-1 [@media(max-width:400px)]:[] relative text-lg font-semibold mb-2 md:mb-0 w-[75px] h-[75px] flex items-center justify-center overflow-hidden group">
                 <span class="relative z-10 hover:text-[#ff952aff] bg-[#f5f5dc] transition-colors duration-300 ease-in-out cursor-pointer">eventribe</span>
-                <div class="absolute inset-0 w-full h-[80px] bg-[url('/images/SplashPaintCom.svg')] group-hover:bg-[url('/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
+                <div class="absolute inset-0 w-full h-[80px] bg-[url('../public/images/SplashPaintCom.svg')] group-hover:bg-[url('../public/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
             </a>
 
             <div class="relative flex-grow mx-4 max-w-lg [@media(max-width:730px)]:order-3">
@@ -63,8 +63,8 @@ if (session_status() == PHP_SESSION_NONE) {
                     <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                         <li>
                             <a href="admin/index.php" class="relative group" data-title="Aller à l'Administration">
-                                <img class="relative z-100 inset-0 w-7.5 h-7.5 animate-bounce transition-opacity duration-300 group-hover:opacity-0" src="/images/adminGray-logo.svg" />
-                                <img class="absolute z-10 inset-0 w-7.5 h-7.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-110" src="/images/adminOrange-logo.svg" />
+                                <img class="relative z-100 inset-0 w-7.5 h-7.5 animate-bounce transition-opacity duration-300 group-hover:opacity-0" src="../public/images/adminGray-logo.svg" />
+                                <img class="absolute z-10 inset-0 w-7.5 h-7.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-110" src="../public/images/adminOrange-logo.svg" />
                             </a>
                         </li>
                     <?php endif; ?>

@@ -1,9 +1,9 @@
 <?php
-require_once 'admin_guard.php';
+require_once(__DIR__ . 'admin_guard.php');
 
-require_once(__DIR__ . '/includes/db_connect.php');
-require_once(__DIR__ . '/includes/auth_functions.php');
-require_once(__DIR__ . '/includes/event_functions.php');
+require_once(__DIR__ . '/api/db_connect.php');
+require_once(__DIR__ . '/api/auth_functions.php');
+require_once(__DIR__ . '/api/event_functions.php');
 
 $action = $_GET['action'] ?? '';
 $eventId = $_GET['id'] ?? null;
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!in_array($fileType, $allowedTypes)) {
                 $_SESSION['message'] = "Format d'image non autorisé. Seuls les fichiers JPG, PNG et GIF sont acceptés.";
             } else {
-                $uploadDir = '/images/uploads/';
+                $uploadDir = '../public/images/uploads/';
                 if (!is_dir($uploadDir)) {
                     mkdir($uploadDir, 0755, true);
                 }
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (!$currentEvent) {
             $_SESSION['message'] = "Événement à modifier introuvable.";
-            header('Location: manage_events.php');
+            header('Location: /manage_events.php');
             exit();
         }
 
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!in_array($fileType, $allowedTypes)) {
                 $_SESSION['message'] = "Format d'image non autorisé. Seuls les fichiers JPG, PNG et GIF sont acceptés.";
             } else {
-                $uploadDir = '/images/uploads/';
+                $uploadDir = '../public/images/uploads/';
                 if (!is_dir($uploadDir)) {
                     mkdir($uploadDir, 0755, true);
                 }
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $pageTitle = "Gestion des Événements";
-include './templates/header.php';
+include '/api/admin/header.php';
 ?>
 
 <h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">Gestion des Événements</h1>
@@ -197,7 +197,7 @@ include './templates/header.php';
     $event = getEventById($eventId);
     if (!$event) {
         $_SESSION['message'] = "Événement à modifier introuvable.";
-        header('Location: manage_events.php');
+        header('Location: /manage_events.php');
         exit();
     }
     ?>
@@ -246,14 +246,14 @@ include './templates/header.php';
             <button type="submit" name="update_event" class="font-bold text-lg text-[#347fd4] hover:text-indigo-900 border-2 rounded-full bg-white hover:bg-amber-50 px-4 p-2 shadow-lg transition duration-300 ease-in-out w-full cursor-pointer">Mettre à jour l'événement</button>
         </form>
         <div class="mt-4 text-center">
-            <a href="manage_events.php" class="font-bold text-red-600 hover:text-red-900 border-1 rounded-full bg-white hover:bg-amber-50 px-4 py-2 shadow-lg transition duration-300 ease-in-out">Annuler</a>
+            <a href="/api/admin/manage_events.php" class="font-bold text-red-600 hover:text-red-900 border-1 rounded-full bg-white hover:bg-amber-50 px-4 py-2 shadow-lg transition duration-300 ease-in-out">Annuler</a>
         </div>
     </div>
 
 <?php else: // Affiche la liste des événements 
 ?>
     <div class="mb-6 text-right">
-        <a href="manage_events.php?action=create" class="px-5 py-2 rounded-full text-xl text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-amber-50 hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Créer un nouvel événement</a>
+        <a href="/api/admin/manage_events.php?action=create" class="px-5 py-2 rounded-full text-xl text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-amber-50 hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Créer un nouvel événement</a>
     </div>
 
     <?php
@@ -297,7 +297,7 @@ include './templates/header.php';
 <?php endif; ?>
 
 <div class="mt-10">
-    <a href="/admin/index.php" class="px-5 py-2 rounded-full text-base text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Retour</a>
+    <a href="/api/admin/index.php" class="px-5 py-2 rounded-full text-base text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Retour</a>
 </div>
 
-<?php include 'templates/footer.php'; ?>
+<?php include '/api/admin/footer.php'; ?>

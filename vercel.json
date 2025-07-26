@@ -1,9 +1,27 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "/.php", "use": "vercel-php@0.7.4" }
-  ],
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.4"
+    }
+  },
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/", "dest": "/api/index.php" },
+    
+    { "src": "/event", "dest": "/api/event_detail.php" },
+    { "src": "/register", "dest": "/api/register.php" },
+    { "src": "/login", "dest": "/api/login.php" },
+    { "src": "/logout", "dest": "/api/logout.php" },
+    { "src": "/register-event", "dest": "/api/register_event.php" },
+    { "src": "/unregister-event", "dest": "/api/unregister_event.php" },
+    { "src": "/legal", "dest": "/api/legal_mentions.php" },
+
+    { "src": "/admin", "dest": "/api/admin/index.php" },
+    { "src": "/admin/manage-events", "dest": "/api/admin/manage_events.php" },
+    { "src": "/admin/manage-users", "dest": "/api/admin/manage_users.php" },
+    { "src": "/admin/manage-registrations", "dest": "/api/admin/manage_registrations.php" },
+
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/public/(.*)", "dest": "/$1" }
   ]
 }

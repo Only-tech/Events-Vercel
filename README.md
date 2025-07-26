@@ -31,3 +31,36 @@ Events - vercel
 - [vercel.json](vercel.json) is a file that contains configuration and override the default behavior of Vercel.
 
 ## Installation 🛠️
+
+/Events
+├── composer.json
+├── composer.lock
+├── vercel.json
+├── api/ # Tous les fichiers
+│ ├── index.php # Page d'accueil (liste des événements)
+│ ├── event_detail.php # Page de détail d'un événement
+│ ├── register.php # Formulaire d'inscription
+│ ├── login.php # Formulaire de connexion
+│ ├── logout.php # Déconnexion
+│ ├── register_event.php # Inscription à un événement
+│ ├── unregister_event.php # Désinscription d'un événement
+| ├── header.php
+│ ├── db_connect.php # Connexion à la base de données
+│ ├── auth_functions.php # Fonctions d'authentification et de gestion des utilisateurs
+│ ├── event_functions.php # Fonctions de gestion des événements
+│ ├── legal_mentions.php # Mentions légales et politique de confidentialité
+│ ├── footer.php
+│ └── admin/ # Interface d'administration (back-office)
+| │ ├── index.php # Dashboard admin
+│ | ├── manage_events.php # Gestion CRUD des événements
+│ | ├── admin_guard.php # Verification en plus
+│ | ├── manage_users.php # Gestion des utilisateurs
+│ | ├── manage_registrations.php # Gestion des inscriptions
+│ | ├── header.php
+│ | ├── footer.php
+| ├── public/
+│ | ├── styles/
+│ | | └── styles.css
+│ | ├── scripts/
+│ | | └── script.js
+│ | ├── images/

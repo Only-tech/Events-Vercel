@@ -1,14 +1,14 @@
 <?php
-require_once 'admin_guard.php';
+require_once(__DIR__ . 'admin_guard.php');
 
-require_once(__DIR__ . '/includes/db_connect.php');
-require_once(__DIR__ . '/includes/auth_functions.php');
-require_once(__DIR__ . '/includes/event_functions.php');
+require_once(__DIR__ . '/api/db_connect.php');
+require_once(__DIR__ . '/api/auth_functions.php');
+require_once(__DIR__ . '/api/event_functions.php');
 
 
 
 $pageTitle = "eventribe - Tableau de bord Admin";
-include 'templates/header.php';
+include '/api/admin/header.php';
 
 // Les nombres totales d'événements, d'utilisateurs et d'inscriptions
 $totalEvents = count(getAllEventsWithRegistrationCount());
@@ -57,4 +57,4 @@ function countUsers()
     </ul>
 </div>
 
-<?php include 'templates/footer.php'; ?>
+<?php include '/api/admin/footer.php'; ?>

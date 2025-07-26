@@ -4,7 +4,7 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-require_once(__DIR__ . '/includes/auth_functions.php');
+require_once(__DIR__ . '/api/auth_functions.php');
 
 ?>
 <!DOCTYPE html>
@@ -14,35 +14,35 @@ require_once(__DIR__ . '/includes/auth_functions.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $pageTitle ?? 'Administration'; ?></title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="../public/styles/styles.css">
     <!-- <link rel="stylesheet" href="/styles/output.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="/images/adminWhite-logo.svg">
+    <link rel="icon" type="image/svg+xml" href="../public/images/adminWhite-logo.svg">
 </head>
 
 <body class="min-h-screen w-full flex flex-col text-[#333] bg-[#f4f7f6] font-['Inter', sans-serif] lateralScrollBar"
-    style="background-image: url('/images/SplashPaint.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+    style="background-image: url('../public/images/SplashPaint.svg'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
     <header class="fixed flex flex-row justify-between items-center z-10000 w-full bg-gray-900 text-white shadow-lg transition-opacity duration-500 py-4 px-[5%]">
         <a href="/admin/index.php" class="relative w-[55px] h-[55px] group" data-title="Administration">
-            <img class="relative z-100 inset-0 w-[50px] h-[50px] animate-bounce transition-opacity duration-300 group-hover:opacity-0" src="/images/adminWhite-logo.svg" />
-            <img class="absolute z-10 inset-0 w-[50px] h-[50px] opacity-0 group-hover:opacity-65 transition-opacity duration-300 group-hover:scale-110" src="/images/adminWhite-logo.svg" />
+            <img class="relative z-100 inset-0 w-[50px] h-[50px] animate-bounce transition-opacity duration-300 group-hover:opacity-0" src="../public/images/adminWhite-logo.svg" />
+            <img class="absolute z-10 inset-0 w-[50px] h-[50px] opacity-0 group-hover:opacity-65 transition-opacity duration-300 group-hover:scale-110" src="../public/images/adminWhite-logo.svg" />
         </a>
         <nav class="flex flex-row gap-8 items-center bg-gray-900">
             <a href="/admin/index.php" class="text-lg transition-opacity duration-300 hover:opacity-65 whitespace-nowrap">Tableau de bord</a>
             <ul class="mobile-menu flex gap-8 text-lg [@media(max-width:840px)]:[display:none]">
                 <li><a href="/admin/manage_events.php" class="relative flex flex-row items-center gap-1 transition-opacity duration-300 hover:opacity-65" data-title="Gérer les Événements">
-                        <img class="relative inset-0 w-[20px] h-[20px]" src="/images/SetWhite-logo.svg" />
+                        <img class="relative inset-0 w-[20px] h-[20px]" src="../public/images/SetWhite-logo.svg" />
                         <span>Événements</span>
                     </a>
                 </li>
                 <li><a href="/admin/manage_registrations.php" class="relative flex flex-row items-center gap-1 transition-opacity duration-300 hover:opacity-65" data-title="Gérer les Inscriptions">
-                        <img class="relative inset-0 w-[20px] h-[20px]" src="/images/SetWhite-logo.svg" />
+                        <img class="relative inset-0 w-[20px] h-[20px]" src="../public/images/SetWhite-logo.svg" />
                         <span>Inscriptions</span>
                     </a>
                 </li>
                 <li><a href="/admin/manage_users.php" class="relative flex flex-row items-center gap-1 transition-opacity duration-300 hover:opacity-65" data-title="Gérer les Utilisateurs">
-                        <img class="relative inset-0 w-[20px] h-[20px]" src="/images/SetWhite-logo.svg" />
+                        <img class="relative inset-0 w-[20px] h-[20px]" src="../public/images/SetWhite-logo.svg" />
                         <span>Utilisateurs</span>
                     </a>
                 </li>

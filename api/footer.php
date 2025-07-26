@@ -27,8 +27,8 @@
                     <li><a href="/login.php" class="hover:text-[#ff952aff] transition duration-300">Connexion</a></li>
                     <li><a href="/register.php" class="hover:text-[#ff952aff] transition duration-300">Inscription</a></li>
                 <?php endif; ?>
-                <li><a href="/includes/legal_mentions.php" class="hover:text-[#ff952aff] transition duration-300">Mentions Légales</a></li>
-                <li><a href="/includes/legal_mentions.php#politique-confidentialite" class="hover:text-[#ff952aff] transition duration-300">Politique de Confidentialité</a></li>
+                <li><a href="/legal_mentions.php" class="hover:text-[#ff952aff] transition duration-300">Mentions Légales</a></li>
+                <li><a href="/legal_mentions.php#politique-confidentialite" class="hover:text-[#ff952aff] transition duration-300">Politique de Confidentialité</a></li>
             </ul>
         </div>
         <div class=" [@media(max-width:849px)]:order-2  [@media(max-width:849px)]:justify-center mx-auto">
@@ -92,7 +92,7 @@
             <div class="relative justify-center items-center mx-auto w-[150px] h-[150px]">
                 <a href="/" class="relative text-2xl font-semibold mb-2 md:mb-0 w-[100px] h-[100px] flex items-center justify-center overflow-hidden group">
                     <span class="relative z-10 hover:text-[#ff952aff] bg-[#f5f5dc] transition-colors duration-300 ease-in-out cursor-pointer">eventribe</span>
-                    <div class="absolute inset-0 w-[100px] h-[100px] bg-[url('/images/SplashPaintCom.svg')] group-hover:bg-[url('/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
+                    <div class="absolute inset-0 w-[100px] h-[100px] bg-[url('../public/images/SplashPaintCom.svg')] group-hover:bg-[url('../public/images/SplashPaintOrange.svg')] bg-no-repeat bg-center bg-contain opacity-80 animate-pulse"></div>
                 </a>
             </div>
         </div>
@@ -102,14 +102,14 @@
     </div>
 </footer>
 
-<script src="/scripts/navBar.js"></script>
+<script src="../public/scripts/navBar.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
-<script src="/scripts/onTopButton.js"></script>
+<script src="../public/scripts/onTopButton.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script src="/scripts/Email.js"></script>
+<script src="../public/scripts/Email.js"></script>
 </body>
 
 </html>

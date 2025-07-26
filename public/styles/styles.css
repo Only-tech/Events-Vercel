@@ -791,7 +791,7 @@
     background-color: var(--color-white);
   }
   .bg-\[url\(\'\/assets\/img\/SplashPaintCom\.svg\'\)\] {
-    background-image: url("/images/SplashPaintCom.svg");
+    background-image: url("../public/images/SplashPaintCom.svg");
   }
   .bg-contain {
     background-size: contain;
@@ -1130,7 +1130,7 @@
   .group-hover\:bg-\[url\(\'\/assets\/img\/SplashPaintOrange\.svg\'\)\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
-        background-image: url("/images/SplashPaintOrange.svg");
+        background-image: url("../public/images/SplashPaintOrange.svg");
       }
     }
   }

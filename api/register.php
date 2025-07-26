@@ -1,7 +1,7 @@
 <?php
 
-require_once(__DIR__ . '/includes/db_connect.php');
-require_once(__DIR__ . '/includes/auth_functions.php');
+require_once(__DIR__ . '/api/db_connect.php');
+require_once(__DIR__ . '/api/auth_functions.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $pageTitle = "Inscription";
-include(__DIR__ . '/includes/templates/header.php');
+include(__DIR__ . '/api/header.php');
 ?>
 
 <div class="max-w-md mx-auto bg-[rgb(248,248,236)] p-8 rounded-lg shadow-lg">
@@ -71,4 +71,4 @@ include(__DIR__ . '/includes/templates/header.php');
     </p>
 </div>
 
-<?php include(__DIR__ . '/includes/templates/footer.php'); ?>
+<?php include(__DIR__ . '/api/footer.php'); ?>

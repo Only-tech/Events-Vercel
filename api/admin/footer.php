@@ -8,13 +8,13 @@
     </div>
 </footer>
 
-<script src="/scripts/main.js"></script>
-<script src="/scripts/navBar.js"></script>
+<script src="../public/scripts/main.js"></script>
+<script src="../public/scripts/navBar.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
-<script src="/scripts/onTopButton.js"></script>
+<script src="../public/scripts/onTopButton.js"></script>
 
 </body>
 
