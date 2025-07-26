@@ -46,11 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['toggle_admin_status']
     } else {
         $_SESSION['message'] = "ID utilisateur invalide pour la mise à jour du statut.";
     }
-    header('Location: manage_users.php');
+    header('Location: /manage_users.php');
     exit();
 }
 
-include '/api/admin/header.php'; // header spécifique à l'admin
+include '/admin/header.php'; // header spécifique à l'admin
 
 $users = getAllUsers();
 ?>
@@ -102,7 +102,7 @@ $users = getAllUsers();
 <?php endif; ?>
 
 <div class="mt-10">
-    <a href="/api/admin/index.php" class="px-5 py-2 rounded-full text-base text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Retour</a>
+    <a href="/admin/index.php" class="px-5 py-2 rounded-full text-base text-[#FFF] hover:text-gray-800 font-medium transition-colors border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-gray-800 cursor-pointer duration-300 ease-in-out">Retour</a>
 </div>
 
-<?php include '/api/admin/footer.php'; ?>
+<?php include '/admin/footer.php'; ?>

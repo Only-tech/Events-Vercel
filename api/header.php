@@ -69,7 +69,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         </li>
                     <?php endif; ?>
                     <li>
-                        <a href="logout.php" class="flex flex-row items-center gap-2 hover:text-[#ff952aff] transition duration-300" data-title="Déconnexion">
+                        <a href="/logout.php" class="flex flex-row items-center gap-2 hover:text-[#ff952aff] transition duration-300" data-title="Déconnexion">
                             <span>(<?php echo htmlspecialchars($_SESSION['username']); ?>)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"></path>
@@ -79,8 +79,8 @@ if (session_status() == PHP_SESSION_NONE) {
                         </a>
                     </li>
                 <?php else: ?>
-                    <li><a href="login.php" class="hover:text-[#ff952aff] transition duration-300">Connexion</a></li>
-                    <li><a href="register.php" class="hover:text-[#ff952aff] transition duration-300">Inscription</a></li>
+                    <li><a href="/login.php" class="hover:text-[#ff952aff] transition duration-300">Connexion</a></li>
+                    <li><a href="/register.php" class="hover:text-[#ff952aff] transition duration-300">Inscription</a></li>
                 <?php endif; ?>
             </ul>
             <button id="burgerBtn" class="flex justify-end text-4xl [@media(min-width:840px)]:[display:none] [@media(min-width:439px)]:order-3 [@media(max-width:438px)]:order-2" data-title="Menu">☰</button>

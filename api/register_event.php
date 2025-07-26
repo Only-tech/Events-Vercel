@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Redirige vers la page de détail de l'événement ou la page d'accueil
 if ($eventId) {
-    header('Location: event_detail.php?id=' . htmlspecialchars($eventId));
+    header('Location: /event_detail.php?id=' . htmlspecialchars($eventId));
 } else {
     header('Location: /');
 }

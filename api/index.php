@@ -49,7 +49,7 @@ if (!empty($searchTerm)) {
                             Places disponibles: <?php echo htmlspecialchars($event['available_seats']); ?>
                             (Inscrits: <?php echo htmlspecialchars($event['registered_count']); ?>)
                         </span>
-                        <a href="/api/event_detail.php?id=<?php echo htmlspecialchars($event['id']); ?>" class="inline-block px-5 py-2 rounded-full text-base font-medium transition-colors group border-[0.5px] shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-[#F0EEE5] hover:bg-[#E8E5D8] hover:border-transparent">
+                        <a href="/event_detail.php?id=<?php echo htmlspecialchars($event['id']); ?>" class="inline-block px-5 py-2 rounded-full text-base font-medium transition-colors group border-[0.5px] shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-[#F0EEE5] hover:bg-[#E8E5D8] hover:border-transparent">
                             En savoir plus<!-- -->&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="inline-block -translate-y-0.5 group-hover:animate-bounce">
                                 <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
                             </svg>
