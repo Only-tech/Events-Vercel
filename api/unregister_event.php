@@ -7,7 +7,7 @@ require_once(__DIR__ . '/event_functions.php');
 // Vérifie si l'utilisateur est connecté
 if (!isUserLoggedIn()) {
     $_SESSION['message'] = "Vous devez être connecté pour annuler une inscription.";
-    header('Location: /login.php');
+    header('Location: /api/login.php');
     exit();
 }
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Redirige vers la page de détail de l'événement ou la page d'accueil
 if ($eventId) {
-    header('Location: /event_detail.php?id=' . htmlspecialchars($eventId));
+    header('Location: /api/event_detail.php?id=' . htmlspecialchars($eventId));
 } else {
     header('Location: /');
 }

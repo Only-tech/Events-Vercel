@@ -20,15 +20,15 @@
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="/my_events.php" class="hover:text-[#ff952aff] transition duration-300">Mes Inscriptions</a></li>
                     <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
-                        <li><a href="/admin/index.php" class="hover:text-[#ff952aff] transition duration-300">Administration</a></li>
+                        <li><a href="/api/admin/index.php" class="hover:text-[#ff952aff] transition duration-300">Administration</a></li>
                     <?php endif; ?>
-                    <li><a href="/logout.php" class="hover:text-[#ff952aff] transition duration-300">Déconnexion (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
+                    <li><a href="/api/logout.php" class="hover:text-[#ff952aff] transition duration-300">Déconnexion (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
                 <?php else: ?>
-                    <li><a href="/login.php" class="hover:text-[#ff952aff] transition duration-300">Connexion</a></li>
-                    <li><a href="/register.php" class="hover:text-[#ff952aff] transition duration-300">Inscription</a></li>
+                    <li><a href="/api/login.php" class="hover:text-[#ff952aff] transition duration-300">Connexion</a></li>
+                    <li><a href="/api/register.php" class="hover:text-[#ff952aff] transition duration-300">Inscription</a></li>
                 <?php endif; ?>
-                <li><a href="/legal_mentions.php" class="hover:text-[#ff952aff] transition duration-300">Mentions Légales</a></li>
-                <li><a href="/legal_mentions.php#politique-confidentialite" class="hover:text-[#ff952aff] transition duration-300">Politique de Confidentialité</a></li>
+                <li><a href="/api/legal_mentions.php" class="hover:text-[#ff952aff] transition duration-300">Mentions Légales</a></li>
+                <li><a href="/api/legal_mentions.php#politique-confidentialite" class="hover:text-[#ff952aff] transition duration-300">Politique de Confidentialité</a></li>
             </ul>
         </div>
         <div class=" [@media(max-width:849px)]:order-2  [@media(max-width:849px)]:justify-center mx-auto">

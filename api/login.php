@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         // Le message d'erreur est déjà défini dans loginUser()
     }
-    header('Location: /login.php'); // Redirige pour afficher le message
+    header('Location: /api/login.php'); // Redirige pour afficher le message
     exit();
 }
 

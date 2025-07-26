@@ -20,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['message'] = "Le mot de passe doit contenir au moins 6 caractères.";
     } else {
         if (registerUser($username, $email, $password)) {
-            header('Location: /login.php'); // Redirige vers la page de connexion après inscription réussie
+            header('Location: /api/login.php'); // Redirige vers la page de connexion après inscription réussie
             exit();
         }
         // Le message d'erreur est déjà défini dans registerUser()
     }
-    header('Location: /register.php'); // Redirige pour afficher le message
+    header('Location: /api/register.php'); // Redirige pour afficher le message
     exit();
 }
 

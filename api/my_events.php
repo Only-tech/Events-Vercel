@@ -7,7 +7,7 @@ require_once(__DIR__ . '/event_functions.php');
 // Redirige si non connecté
 if (!isUserLoggedIn()) {
     $_SESSION['message'] = "Vous devez être connecté pour voir vos inscriptions.";
-    header('Location: login.php');
+    header('Location: /api/login.php');
     exit();
 }
 

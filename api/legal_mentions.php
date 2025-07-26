@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Mentions Légales - eventribe";
-include '/header.php';
+include(__DIR__ . '/header.php');
 ?>
 
 <section class="max-w-4xl mx-auto bg-[rgb(248,248,236)] p-8 rounded-lg shadow-lg">
@@ -153,4 +153,4 @@ include '/header.php';
 </section>
 <a href="/" class="mt-10 px-5 py-2 rounded-full text-base text-[#FFF] hover:text-[#ff952aff] font-medium transition-colors group border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-[#ff952aff] cursor-pointer duration-300 ease-in-out">Retour</a>
 
-<?php include '/footer.php'; ?>
+<?php include(__DIR__ . '/footer.php'); ?>
