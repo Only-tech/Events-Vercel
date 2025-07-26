@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db_connect.php';
+require_once(__DIR__ . '/db_connect.php');
 
 /**
  * Récupère tous les événements avec le nombre d'inscrits.

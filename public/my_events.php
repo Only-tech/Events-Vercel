@@ -1,8 +1,8 @@
 <?php
 
-require_once './includes/db_connect.php';
-require_once './includes/auth_functions.php';
-require_once './includes/event_functions.php';
+require_once(__DIR__ . '/includes/db_connect.php');
+require_once(__DIR__ . '/includes/auth_functions.php');
+require_once(__DIR__ . '/includes/event_functions.php');
 
 // Redirige si non connecté
 if (!isUserLoggedIn()) {
@@ -12,7 +12,7 @@ if (!isUserLoggedIn()) {
 }
 
 $pageTitle = "Mes Inscriptions";
-include './includes/templates/header.php';
+include(__DIR__ . '/includes/templates/header.php');
 
 $userId = $_SESSION['user_id'];
 
@@ -96,4 +96,4 @@ $myEvents = getRegisteredEventsForUser($userId);
 </div>
 
 
-<?php include './includes/templates/footer.php'; ?>
+<?php include(__DIR__ . '/includes/templates/footer.php'); ?>

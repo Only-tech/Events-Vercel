@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 $pageTitle = "Connexion";
-include 'includes/templates/header.php';
+include(__DIR__ . '/includes/templates/header.php');
 ?>
 
 <div class="max-w-md mx-auto bg-[rgb(248,248,236)] p-8 rounded-lg shadow-lg">

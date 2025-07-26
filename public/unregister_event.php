@@ -1,13 +1,13 @@
 <?php
 
-require_once './includes/db_connect.php';
-require_once './includes/auth_functions.php';
-require_once './includes/event_functions.php';
+require_once(__DIR__ . '/includes/db_connect.php');
+require_once(__DIR__ . '/includes/auth_functions.php');
+require_once(__DIR__ . '/includes/event_functions.php');
 
 // Vérifie si l'utilisateur est connecté
 if (!isUserLoggedIn()) {
     $_SESSION['message'] = "Vous devez être connecté pour annuler une inscription.";
-    header('Location: login.php');
+    header('Location: /login.php');
     exit();
 }
 

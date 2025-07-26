@@ -1,7 +1,7 @@
 <?php
 
-require_once './includes/db_connect.php';
-require_once './includes/auth_functions.php';
+require_once(__DIR__ . '/includes/db_connect.php');
+require_once(__DIR__ . '/includes/auth_functions.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -20,17 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['message'] = "Le mot de passe doit contenir au moins 6 caractères.";
     } else {
         if (registerUser($username, $email, $password)) {
-            header('Location: login.php'); // Redirige vers la page de connexion après inscription réussie
+            header('Location: /login.php'); // Redirige vers la page de connexion après inscription réussie
             exit();
         }
         // Le message d'erreur est déjà défini dans registerUser()
     }
-    header('Location: register.php'); // Redirige pour afficher le message
+    header('Location: /register.php'); // Redirige pour afficher le message
     exit();
 }
 
 $pageTitle = "Inscription";
-include './includes/templates/header.php';
+include(__DIR__ . '/includes/templates/header.php');
 ?>
 
 <div class="max-w-md mx-auto bg-[rgb(248,248,236)] p-8 rounded-lg shadow-lg">
@@ -71,4 +71,4 @@ include './includes/templates/header.php';
     </p>
 </div>
 
-<?php include './includes/templates/footer.php'; ?>
+<?php include(__DIR__ . '/includes/templates/footer.php'); ?>

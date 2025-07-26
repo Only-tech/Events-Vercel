@@ -21,7 +21,7 @@ if (!$event) {
 }
 
 $pageTitle = htmlspecialchars($event['title']);
-include './includes/templates/header.php';
+include(__DIR__ . '/includes/templates/header.php');
 
 $isLoggedIn = isUserLoggedIn();
 $isRegistered = false;
@@ -93,4 +93,4 @@ $remainingSeats = $event['available_seats'] - $registeredCount;
 
 <a href="/" class="mt-10 px-5 py-2 rounded-full text-base text-[#FFF] hover:text-[#ff952aff] font-medium transition-colors group border-[0.5px] border-transparent shadow-sm shadow-[hsl(var(--always-black)/5.1%)] bg-gray-800 hover:bg-[#FFF] hover:border-[#ff952aff] cursor-pointer duration-300 ease-in-out">Retour</a>
 
-<?php include './includes/templates/footer.php'; ?>
+<?php include(__DIR__ . '/includes/templates/footer.php'); ?>
