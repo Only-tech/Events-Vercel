@@ -28,13 +28,13 @@ if (session_status() == PHP_SESSION_NONE) {
             </a>
 
             <div class="relative flex-grow mx-4 max-w-lg [@media(max-width:730px)]:order-3">
-                <form action="/index.php" method="GET" class="group flex items-center">
+                <form action="/api/index.php" method="GET" class="group flex items-center">
                     <div class="group w-full flex flex-row rounded-full border border-gray-300 transition duration-300 hover:border-[#ff952aff] group-focus:ring-[#ff952aff] group-focus-within:border-[#ff952aff] overflow-hidden">
                         <input type="text" name="search" placeholder="Rechercher un événement..."
                             class="w-full px-4 py-2 border-none border-transparent outline-none text-sm"
                             value="<?php echo htmlspecialchars($_GET['search'] ?? ''); ?>">
                         <?php if (isset($_GET['search']) && $_GET['search'] !== ''): ?>
-                            <a href="/index.php" class="p-1 flex items-center justify-center " title="Effacer la recherche"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <a href="/api/index.php" class="p-1 flex items-center justify-center " title="Effacer la recherche"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     viewBox="0 0 256 256" class="inline-block rotate-135 animate-pulse">
                                     <path d="M136 120h56a8 8 0 0 1 0 16h-56v56a8 8 0 0 1-16 0v-56H64a8 8 0 0 1 0-16h56V64a8 8 0 0 1 16 0v56z" />
                                 </svg></a>
