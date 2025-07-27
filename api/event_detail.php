@@ -1,8 +1,8 @@
 <?php
 
-require_once '/db_connect.php';
-require_once '/event_functions.php';
-require_once '/auth_functions.php';
+require_once(__DIR__ . '/db_connect.php');
+require_once(__DIR__ . '/event_functions.php');
+require_once(__DIR__ . '/auth_functions.php');
 
 $eventId = $_GET['id'] ?? null;
 
